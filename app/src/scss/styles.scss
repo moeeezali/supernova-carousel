@@ -1,0 +1,113 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+$primary-color: #f3436c;
+
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+
+  .carousel-inner .carousel-item-start.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+  transform: translateX(0);
+}
+
+.carousel-item > div {
+  padding: 15px;
+}
+
+h3.product-title {
+  font-size: 1em;
+}
+
+.price {
+  color: $primary-color;
+}
+
+button.add-to-cart {
+  background-color: $primary-color;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  opacity: 1;
+  width: 5%;
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $primary-color;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-image: none;
+    background-color: #fff;
+    position: relative;
+    font-size: 45px;
+
+    &::before {
+      position: absolute;
+      top: -25px;
+      left: 8px;
+    }
+  }
+
+  .carousel-control-prev-icon::before {
+    content: "\2039";
+  }
+
+  .carousel-control-next-icon::before {
+    content: "\203A";
+  }
+}
+
+.star-rating {
+  font-size: 1em;
+
+  .fa-star::before {
+    color: $primary-color;
+    content: "\2606";
+  }
+
+  .fa-star-o::before {
+    color: $primary-color;
+    content: "\2605";
+  }
+
+  .counter {
+    font-size: 0.7em;
+  }
+}
